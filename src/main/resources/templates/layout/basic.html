@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="setContent(content)">
+    <head>
+        <script>
+            // 메뉴 드롭다운
+            $(document).ready(function () {
+                $(".outer-menu-item").hover(function () {
+                    $(this).find(".inner-menu").show();
+                }, function () {
+                    $(this).find(".inner-menu").hide();
+                });
+            });
+        </script>
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    </head>
+    <body>
+    <nav class="nav">
+        <ul>
+            <li><a th:href="@{/homepage/login}">로그인</a></li>
+            <li><a th:href="@{/homepage/join}">회원가입</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a th:href="@{/board/list}">공지사항</a></li>
+        </ul>
+    </nav>
+    <div>
+
+        <h1 class="m" ><a th:href="@{/homepage/main}"><img src="/assets/home.jpg" class="home"><b>Diamond Ring</b></a></h1>
+    </div>
+    <div id="search-box">
+        <input type="text" id="search-input" placeholder="상품 검색">
+        <button id="search-btn" type="button">검색</button>
+    </div>
+    <hr>
+    <nav class="nav2" id="main-navigation">
+        <ul class="outer-menu">
+            <li class="outer-menu-item">
+                <span class="menu-title"><a th:href="@{/homepage/best}">Best 100</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">3만원 이하 Best</a></li>
+                    <li class="inner-menu-item"><a href="#">3만~5만원 Best</a></li>
+                    <li class="inner-menu-item"><a href="#">5만~10만원 Best</a></li>
+                    <li class="inner-menu-item"><a href="#">10만원 이상 Best</a></li>
+
+                </ul>
+            </li>
+
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">귀걸이</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">진주 귀걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">침형 귀걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">원터치 귀걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">링 귀걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">탄생석 귀걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">귀찌</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">목걸이</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">팬던트</a></li>
+                    <li class="inner-menu-item"><a href="#">체인 목걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">이니셜 목걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">진주 목걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">롱 목걸이</a></li>
+                    <li class="inner-menu-item"><a href="#">탄생석 목걸이</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">반지</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">심플링</a></li>
+                    <li class="inner-menu-item"><a href="#">커플링</a></li>
+                    <li class="inner-menu-item"><a href="#">탄생석 반지</a></li>
+                    <li class="inner-menu-item"><a href="#">진주 반지</a></li>
+                    <li class="inner-menu-item"><a href="#">미스링</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">팔찌 / 발찌</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">커플 팔찌</a></li>
+                    <li class="inner-menu-item"><a href="#">원석 팔찌</a></li>
+                    <li class="inner-menu-item"><a href="#">진주 팔찌</a></li>
+                    <li class="inner-menu-item"><a href="#">커플 발찌</a></li>
+                    <li class="inner-menu-item"><a href="#">원석 발찌</a></li>
+                    <li class="inner-menu-item"><a href="#">이니셜 발찌</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">피어싱</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">일자 바벨 피어싱</a></li>
+                    <li class="inner-menu-item"><a href="#">원볼링</a></li>
+                    <li class="inner-menu-item"><a href="#">투볼링</a></li>
+                    <li class="inner-menu-item"><a href="#">시그먼트링</a></li>
+                    <li class="inner-menu-item"><a href="#">라블렛 피어싱</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">헤어</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">머리 핀</a></li>
+                    <li class="inner-menu-item"><a href="#">머리 띠</a></li>
+                    <li class="inner-menu-item"><a href="#">머리 끈</a></li>
+                    <li class="inner-menu-item"><a href="#">헤어 집게</a></li>
+                    <li class="inner-menu-item"><a href="#">모자</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a href="#">쥬얼리 세트</a></span>
+                <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="#">탄생석 세트</a></li>
+                    <li class="inner-menu-item"><a href="#">다이어몬드 세트</a></li>
+                    <li class="inner-menu-item"><a href="#">이니셜 세트</a></li>
+                    <li class="inner-menu-item"><a href="#">진주 세트</a></li>
+                    <li class="inner-menu-item"><a href="#">실버 세트</a></li>
+                </ul>
+            </li>
+            <li class="outer-menu-item">
+                <span class="menu-title"><a th:href="@{/community/list}">커뮤니티</a></span>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <th:block th:replace="${content}"></th:block>
+                </div>
+
+        <!-- Bootstrap core JS-->
+<!--        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--        &lt;!&ndash; Core theme JS&ndash;&gt;-->
+<!--        <script th:src="@{/js/scripts.js}"></script>-->
+
+    <div>
+        <h5><a href="#top">TOP▲</a></h5>
+    </div>
+    <div>
+        <hr>
+        <nav class="nav3">
+            <ul class="ma1">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용안내</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </div>
+    <footer>
+        <div class="left">
+            <h1>02-1234-2480</h1>
+            <h4>고객센터 운영시간</h4>
+            <p>평일 - 오전 09:00 ~ 오후 06:00 <br>점심 - 오후 12:00 ~ 오후 01:00 <br>토 / 일 / 공휴일 휴무</p>
+        </div>
+        <div class="jo">
+            <P>상호명:(주식회사) Diamond Ring <br>대표:박명연</P>
+            <p>사업자 등록번호 <br> 123-45-67890</p>
+        </div>
+        <div class="right">
+            <h4>위치</h4>
+            <p>서울 용산구 보광로 73</p>
+        </div>
+    </footer>
+    </body>
+</th:block>
+</html>
