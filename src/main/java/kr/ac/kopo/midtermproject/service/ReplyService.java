@@ -42,6 +42,7 @@ public interface ReplyService {
                 .replyer(reply.getReplyer())
                 .regDate(reply.getRegDate())
                 .modDate(reply.getModDate())
+                .bno(reply.getCommunity().getBno())
                 .build();
         return replyDTO;
     }

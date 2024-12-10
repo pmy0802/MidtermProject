@@ -123,7 +123,7 @@
                     $.each(arr, function (idx, reply){
                         console.log(reply);
                         htmlStr += '<div class="card-body" data-rno="'+reply.rno+'"><b>'+reply.rno+'</b>';
-                        htmlStr += '<h5 class="card-title">'+reply.text+'</h5>'
+                        htmlStr += '<h4 class="card-title">'+reply.text+'</h4>'
                         htmlStr += '<h6 class="card-subtitle">'+reply.replyer+'</h6>'
                         htmlStr += '<p class="card-text">'+ formatTime(reply.regDate)+'</p>'
                         htmlStr += '</div>'

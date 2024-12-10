@@ -15,12 +15,8 @@
                 $(this).find(".inner-menu").hide();
             });
         });
-        
-        //로그인 성공
-        function buttonClick() {
-            alert("로그인 성공하였습니다.")
-            window.location.href = "main1.html";
-        }
+
+
     </script>
 
     <style>
@@ -313,7 +309,12 @@
 <body>
 <nav class="nav">
     <ul>
-        <li><a th:href="@{/homepage/login}">로그인</a></li>
+        <li th:if="${#authorization.expression('isAuthenticated()')}">
+            <a th:href="@{/logout}">로그아웃</a>
+        </li>
+        <li th:if="${#authorization.expression('!isAuthenticated()')}">
+            <a th:href="@{/homepage/login}">로그인</a>
+        </li>
         <li><a th:href="@{/homepage/join}">회원가입</a></li>
         <li><a href="#">장바구니</a></li>
         <li><a href="#">마이페이지</a></li>
@@ -419,10 +420,10 @@
     <br><br><br><br><br><br>
     <div class="login-container">
         <h2>로그인</h2>
-        <form class="login-form" action="/login" method="post">
+        <form class="login-form" action="/login" method="post" onsubmit="buttonClick(event)">
             <input type="text" name="username" placeholder="아이디">
             <input type="password" name="password" placeholder="비밀번호">
-            <button type="button" onclick="buttonClick()">로그인</button>
+            <button type="submit" onclick="buttonClick()">로그인</button>
         </form>
     </div>
     <div>
